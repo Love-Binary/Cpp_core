@@ -1,0 +1,33 @@
+polymorphism -- operator and function overloading
+             -- one thing exist in many forms 
+             -- one action leads to different reaction
+
+
+function overloading:        greet() -- good morning 
+                             greet(love) -- good morning, love 
+
+types polymorphism 
+    -compile time polymorphism
+        -operator and function overloading 
+    -run polymorphism
+        -virtual function
+
+
+A virtual function in C++ is a member function in a base class that can be overridden in a derived class. When a base class pointer points to a derived class object, the derived class’s version of the function is invoked, ensuring runtime polymorphism.
+
+DECLERATION : 
+    class Base {
+    public:
+        virtual void show() {  // Virtual function
+            cout << "Base class function" << endl;
+        }
+    };
+
+Rules for Virtual Functions in C++
+    A virtual function in a base class enables dynamic polymorphism, allowing derived classes to override it.
+    If a derived class does not override a virtual function, the base class version runs instead.
+    Virtual functions use runtime binding, meaning the function executed depends on the actual object type.
+    A base class pointer or reference calling a virtual function runs the derived class version if overridden.
+    C++ uses a VTable (Virtual Table) and vptr (virtual pointer) to manage virtual function calls efficiently.
+    A virtual destructor makes sure the right destructor runs when deleting a derived object through a base class pointer. This prevents memory leaks.
+
