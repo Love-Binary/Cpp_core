@@ -1,0 +1,1 @@
+(void*&)funcPtr2
